@@ -1,0 +1,37 @@
+{
+  "name": "lcars-react",
+  "version": "0.1.0",
+  "description": "A component library for React, which mimicks the style of Michael Okuda's okudagrams as represented in LCARS consoles in Star Trek.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn build",
+    "build": "tsc --outDir ./dist",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "repository": "git@github.com:iLambda/lcars-react.git",
+  "author": "iLambda <me@ilambda.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/eslint": "^8.44.0",
+    "@types/react": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "sass": "^1.64.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-error-boundary": "^4.0.10",
+    "ts-pattern": "^5.0.4"
+  }
+}
