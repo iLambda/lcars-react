@@ -2,9 +2,9 @@ import * as fonts from '@fix/fonts';
 import { fontFace } from '@vanilla-extract/css';
 
 /* A helper to link the fonts */
-const urlFont = (url: string, ext: string) => `url(${url}) format('${ext}')`;
-const srcFont = (ext: string, font: Record<string, string>) => font[ext] && urlFont(font[ext]!, ext); 
 const extFont = ['woff2', 'woff', 'ttf', 'eot'] as const;
+const urlFont = (url: string, ext: string) => `url(${url}) format('${ext}')`;
+const srcFont = (ext: string, font: Record<string, string>) => ext in font ? urlFont(font[ext]!, ext) : undefined; 
 const linkFont = (font: Record<string, string>) => extFont.flatMap(ext => srcFont(ext, font) ?? []);
 
 export const antonio = fontFace([
