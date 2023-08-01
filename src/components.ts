@@ -1,0 +1,1 @@
+export { Pill } from '@lib/components/input/pill';

@@ -16,6 +16,7 @@
     "build": "yarn compile && yarn fixtures && rimraf ./dist/*.tsbuildinfo",
     "compile": "tsc --build && tsc-alias",
     "fixtures": "node ./esbuild.fix.mjs",
+    "docs": "typedoc",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint-fix-all": "eslint --fix src --ext ts,tsx --report-unused-disable-directives"
   },
@@ -38,6 +39,8 @@
     "rimraf": "^5.0.1",
     "tiny-glob": "^0.2.9",
     "tsc-alias": "^1.8.7",
+    "typedoc": "^0.24.8",
+    "typedoc-plugin-expand-object-like-types": "^0.1.2",
     "typescript": "^5.1.6"
   },
   "dependencies": {

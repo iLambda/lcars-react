@@ -1,3 +1,2 @@
-import { antonio } from '@fix/fonts';
-
-console.log(antonio.bold);
+export * as style from './styles';
+export * from './components';

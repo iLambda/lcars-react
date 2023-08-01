@@ -1,10 +1,19 @@
-import { ReactNode, memo } from 'react';
 import * as stylesheet from './pill.css';
 
+import { ReactNode, memo } from 'react';
+import { Alignment } from '@lib/utils/types';
+
 type PillProps = {
-    children?: ReactNode;    
+    children?: ReactNode;
+    align?: Alignment;
+    
+    /* Called when control is clicked */
+    onClick?: () => void;
 }
 
+/**
+ * @group Components
+ */
 export const Pill = memo((props: PillProps) => {
     /* Return the component */
     return (

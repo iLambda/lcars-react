@@ -1,0 +1,8 @@
+{
+    "out": "./doc",
+    "entryPoints": ["./src/index.ts"],
+    "hideGenerator": true,
+    "plugin": [ 
+        "typedoc-plugin-expand-object-like-types"
+    ]
+}
