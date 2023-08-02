@@ -1,5 +1,10 @@
-import { StyleRule } from '@vanilla-extract/css';
+import { StyleRule, createVar } from '@vanilla-extract/css';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
 
+/* Pull some types from vanilla extract */
+export type CSSVariable = ReturnType<typeof createVar>;
+
+/* Some useful styles */
 export const styles = {
     /* Unstyle a button */
     unstyledButton: {
@@ -19,3 +24,7 @@ export const styles = {
         WebkitAppearance: 'button',
     }
 } satisfies Record<string, StyleRule>;
+
+/* Assign variables */
+export const assign = <const Vars extends string>(_: { vars: Record<Vars, CSSVariable> }, values: Record<Vars, string>) =>
+    assignInlineVars(values);
